@@ -61,8 +61,8 @@
                     <span class="nav-text">Roles</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="ui-accordion.html">Ajout Role</a></li>
-                    <li><a href="ui-alert.html">Liste Role</a></li>
+                    <li><a href="{{ route('admin.roles.create')}}">Ajout Role</a></li>
+                    <li><a href="{{ route('admin.roles.index')}}">Liste Role</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -70,21 +70,18 @@
                     <span class="nav-text">Profil</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="uc-select2.html">Ajout Profil</a></li>
-                    <li><a href="uc-nestable.html">Liste Profil</a></li>
+                    <li><a href="#">Ajout Profil</a></li>
+                    <li><a href="#">Liste Profil</a></li>
 
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-072-printer"></i>
-                    <span class="nav-text">Forms</span>
+                    <span class="nav-text">Permissions</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="form-element.html">Form Elements</a></li>
-                    <li><a href="form-wizard.html">Wizard</a></li>
-                    <li><a href="form-ckeditor.html">CkEditor</a></li>
-                    <li><a href="form-pickers.html">Pickers</a></li>
-                    <li><a href="form-validation.html">Form Validate</a></li>
+                    <li><a href="{{ route('admin.permissions.create')}}">Ajout Permissions</a></li>
+                    <li><a href="{{ route('admin.permissions.index')}}">Liste Permissions</a></li>
                 </ul>
             </li>
 
@@ -111,7 +108,6 @@
             <p class="fs-12">Made with <span class="heart"></span> by DexignLab</p>
         </div>
     </div>
-    <div class="flex w-full bg-slate-50">
-        {{ $slot }}
-    </div>
+   
 </div>
+
