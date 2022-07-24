@@ -28,7 +28,7 @@
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" method="POST" action="/admin/roles/create"
+                                <form class="needs-validation" novalidate="" method="POST" action="/admin/roles/store"
                                     enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">

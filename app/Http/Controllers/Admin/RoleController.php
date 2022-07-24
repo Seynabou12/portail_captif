@@ -26,4 +26,18 @@ class RoleController extends Controller
         Role::create($input);
         return redirect('admin/roles')->with('flash-message', 'Le role à été bien enregistré');
     }
+
+    public function edit($id)
+    {
+        $role = Role::find($id);
+        return view('admin.roles.edit')->with('role', $role);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $role = Role::find($id);
+        $input = $request->all();
+        $role->update($input);
+        return redirect('admin/roles')->with('flash-message', 'Vos modifications ont été bien enregistré');
+    }
 }
