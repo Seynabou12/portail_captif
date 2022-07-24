@@ -68,7 +68,7 @@
                                             <div class="mb-3 row">
                                                 <div class="col-lg-8 ms-auto">
                                                     <button type="submit" class="btn "
-                                                        style="background-color: #C15DFB; color: white;">S'incrire</button>
+                                                        style="background-color: #C15DFB; color: white;">Modifier</button>
                                                 </div>
                                             </div>
                                         </div>

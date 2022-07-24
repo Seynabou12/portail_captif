@@ -25,4 +25,18 @@ class PermissionController extends Controller
         Permission::create($input);
         return redirect('admin/permissions')->with('flash-message', 'Votre permission à été bien enregistré');
     }
+
+    public function edit($id)
+    {
+        $permission = Permission::find($id);
+        return view('admin.permissions.edit')->with('permission', $permission);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $permission = Permission::find($id);
+        $input = $request->all();
+        $permission->update($input);
+        return redirect('admin/permissions')->with('flash-message', 'Vos modifications ont été bien enregistré');
+    }
 }

@@ -43,7 +43,7 @@
                                                 <td>{{ $permission->guard_name }}</td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a href="#"
+                                                        <a href="{{ route('admin.permissions.edit', $permission->id) }}"
                                                             class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                                 class="fas fa-pencil-alt"></i></a>
                                                         <a href="#" class="btn btn-danger shadow btn-xs sharp"><i

@@ -16,7 +16,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item active"><a href="javascript:void(0)" style="color: #C15DFB;">Admin</a>
                     </li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">Roles</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Permissions</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -28,37 +28,39 @@
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" method="POST" action="/admin/roles/store"
+                                <form class="needs-validation" novalidate="" method="POST" action="{{ route('admin.permissions.update', $permission) }}"
                                     enctype="multipart/form-data">
                                     @csrf
+                                    @method('PUT')
                                     <div class="row">
                                         <div class="col-xl-12">
                                             <div class="mb-5 row">
                                                 <label class="col-lg-12 col-form-label" for="validationCustom01">Nom
-                                                    du Role
+                                                    Permission
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-6">
                                                     <input type="text" class="form-control" id="validationCustom01"
-                                                        placeholder="Enter le nom du role.." required=""
-                                                        name="name">
+                                                        placeholder="Enter le nom de la permission.." required=""
+                                                        name="name" value="{{ $permission->name }}">
                                                     <div class="invalid-feedback">
-                                                        entrer le nom du role.
+                                                        entrer le nom de la permission.
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xl-12">
                                             <div class="mb-5 row">
-                                                <label class="col-lg-12 col-form-label" for="validationCustom01">Guard_name
+                                                <label class="col-lg-12 col-form-label" for="validationCustom01">GUard_name
+                                                    
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-6">
                                                     <input type="text" class="form-control" id="validationCustom01"
-                                                        placeholder="Enter le guard_nom du role.." required=""
-                                                        name="guard_name">
+                                                        placeholder="Enter le guard_nom de la permission.." required=""
+                                                        name="guard_name" value="{{ $permission->guard_name }}">
                                                     <div class="invalid-feedback">
-                                                        entrer le guard_nom du role.
+                                                        entrer le guard_nom de la permission.
                                                     </div>
                                                 </div>
                                             </div>
@@ -67,7 +69,7 @@
                                             <div class="mb-3 row">
                                                 <div class="col-lg-8 ms-auto">
                                                     <button type="submit" class="btn "
-                                                        style="background-color: #C15DFB; color: white;">Enregistrer</button>
+                                                        style="background-color: #C15DFB; color: white;">Modifier</button>
                                                 </div>
                                             </div>
                                         </div>
