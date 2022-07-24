@@ -13,4 +13,17 @@ class RoleController extends Controller
         $roles = Role::all();
         return view('admin.roles.index', compact('roles'));
     }
+
+    public function create()
+    {
+        return view('admin.roles.create');
+    }
+
+    public function store(Request $request)
+    {
+
+        $input = $request->all();
+        Role::create($input);
+        return redirect('admin/roles')->with('flash-message', 'Le role à été bien enregistré');
+    }
 }
