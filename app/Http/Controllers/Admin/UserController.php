@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rules;
 
 class UserController extends Controller
 {
@@ -22,7 +26,11 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        User::create($input);
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
         return redirect('admin/users')->with('flash-message', 'User à été bien enregistré');
     }
 

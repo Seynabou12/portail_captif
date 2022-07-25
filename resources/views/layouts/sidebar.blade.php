@@ -80,11 +80,11 @@
                     <span class="nav-text">Permissions</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{ route('admin.permissions.create')}}">Ajout Permissions</a></li>
-                    <li><a href="{{ route('admin.permissions.index')}}">Liste Permissions</a></li>
+                    <li><a href="{{ route('admin.permissions.create') }}">Ajout Permissions</a></li>
+                    <li><a href="{{ route('admin.permissions.index') }}">Liste Permissions</a></li>
                 </ul>
             </li>
-            
+
 
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-022-copy"></i>
@@ -104,11 +104,7 @@
             </li>
         </ul>
 
-        <div class="copyright">
-            <p><strong>Dompet Payment Admin Dashboard</strong> © 2022 All Rights Reserved</p>
-            <p class="fs-12">Made with <span class="heart"></span> by DexignLab</p>
-        </div>
-    </div>
-   
-</div>
 
+    </div>
+
+</div>

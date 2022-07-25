@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse justify-content-between">
                 <div class="header-left">
                     <div class="dashboard_bar">
-                        Tableau de bord
+                        Dashbord Admin
                     </div>
                 </div>
                 <ul class="navbar-nav header-right">
@@ -31,7 +31,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a href="javascript:void(0);" class="btn  d-sm-inline-block d-none" style="background-color: #C15DFB; color: white;">Generate
+                        <a href="javascript:void(0);" class="btn  d-sm-inline-block d-none" style="background-color: #fd7e14; color: white;">Generate
                             Report<i class="las la-signal ms-3 scale5"></i></a>
                     </li>
                 </ul>

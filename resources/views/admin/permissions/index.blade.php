@@ -10,7 +10,7 @@
 
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Admin</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0)" style="color: #fd7e14;">Admin</a></li>
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Permissions</a></li>
                 </ol>
             </div>

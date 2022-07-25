@@ -14,9 +14,9 @@
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="javascript:void(0)" style="color: #C15DFB;">Admin</a>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0)" style="color: #fd7e14;">Admin</a>
                     </li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">Roles</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Utilisateurs</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -82,7 +82,7 @@
                                             <div class="mb-3 row">
                                                 <div class="col-lg-8 ms-auto">
                                                     <button type="submit" class="btn "
-                                                        style="background-color: #C15DFB; color: white;">Enregistrer</button>
+                                                        style="background-color: #fd7e14; color: white;">Enregistrer</button>
                                                 </div>
                                             </div>
                                         </div>
