@@ -10,15 +10,15 @@
 
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="javascript:void(0)" style="color: #fd7e14">Admin</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">Utilisateurs</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0)" style="color: #fd7e14;">Admin</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Profiles</a></li>
                 </ol>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Listes des Utilisateurs</h4>
+                            <h4 class="card-title">Listes des Profiles</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -27,25 +27,21 @@
                                         <tr>
                                             <th>Id</th>
                                             <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Password</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php $no = 1; ?>
-                                        @foreach ($users as $user)
+                                        @foreach ($profiles as $profile)
                                             <tr>
                                                 <td>{{ $no++ }}</td>
-                                                <td>{{ $user->name }}</td>
-                                                <td>{{ $user->email }}</td>
-                                                <td>{{ $user->password }}</td>
+                                                <td>{{ $profile->name }}</td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a href="{{ route('admin.users.edit', $user->id) }}"
+                                                        <a href="{{ route('admin.profils.edit', $profile->id) }}"
                                                             class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                                 class="fas fa-pencil-alt"></i></a>
-                                                        <form action="{{ route('admin.users.destroy', $user->id) }}"
+                                                        <form action="{{ route('admin.profils.destroy', $profile->id) }}"
                                                             method="POST"
                                                             onsubmit="return confirm('Voulez-vous vraiment supprimer')">
                                                             @csrf

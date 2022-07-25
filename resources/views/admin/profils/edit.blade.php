@@ -16,7 +16,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item active"><a href="javascript:void(0)" style="color: #fd7e14;">Admin</a>
                     </li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">Roles</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Profiles</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -28,7 +28,7 @@
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" method="POST" action="{{ route('admin.roles.update', $role) }}"
+                                <form class="needs-validation" novalidate="" method="POST" action="{{ route('admin.profils.update', $profile) }}"
                                     enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
@@ -36,15 +36,15 @@
                                         <div class="col-xl-12">
                                             <div class="mb-5 row">
                                                 <label class="col-lg-12 col-form-label" for="validationCustom01">Nom
-                                                    du Role
+                                                    du Profile
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-6">
                                                     <input type="text" class="form-control" id="validationCustom01"
-                                                        placeholder="Enter le nom du role.." required=""
-                                                        name="name" value="{{ $role->name }}">
+                                                        placeholder="Enter le nom du profile.." required=""
+                                                        name="name" value="{{ $profile->name }}">
                                                     <div class="invalid-feedback">
-                                                        entrer le nom du role.
+                                                        entrer le nom du profile.
                                                     </div>
                                                 </div>
                                             </div>

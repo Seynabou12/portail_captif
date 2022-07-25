@@ -48,21 +48,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xl-12">
-                                            <div class="mb-5 row">
-                                                <label class="col-lg-12 col-form-label" for="validationCustom01">Guard_name
-                                                    <span class="text-danger">*</span>
-                                                </label>
-                                                <div class="col-lg-6">
-                                                    <input type="text" class="form-control" id="validationCustom01"
-                                                        placeholder="Enter le guard_nom du role.." required=""
-                                                        name="guard_name">
-                                                    <div class="invalid-feedback">
-                                                        entrer le guard_nom du role.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                         <div class="col-xl-6">
                                             <div class="mb-3 row">
                                                 <div class="col-lg-8 ms-auto">

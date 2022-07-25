@@ -31,8 +31,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a href="javascript:void(0);" class="btn  d-sm-inline-block d-none" style="background-color: #fd7e14; color: white;">Generate
-                            Report<i class="las la-signal ms-3 scale5"></i></a>
+                        <a href="javascript:void(0);" class="btn  d-sm-inline-block d-none" style="background-color: #fd7e14; color: white;">Portail Captif<i class="las la-signal ms-3 scale5"></i></a>
                     </li>
                 </ul>
             </div>

@@ -28,10 +28,8 @@ class RoleController extends Controller
         return redirect('admin/roles')->with('flash-message', 'Le role à été bien enregistré');
     }
 
-   
     public function edit($id)
     {
-
         $role = Role::find($id);
         return view('admin.roles.edit')->with('role', $role,);
     }

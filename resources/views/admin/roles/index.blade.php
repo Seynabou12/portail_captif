@@ -10,7 +10,7 @@
 
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Admin</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0)" style="color: #fd7e14;">Admin</a></li>
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Roles</a></li>
                 </ol>
             </div>
@@ -27,7 +27,6 @@
                                         <tr>
                                             <th>Id</th>
                                             <th>Name</th>
-                                            <th>guard_name</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -37,7 +36,6 @@
                                             <tr>
                                                 <td>{{ $no++ }}</td>
                                                 <td>{{ $role->name }}</td>
-                                                <td>{{ $role->guard_name }}</td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <a href="{{ route('admin.roles.edit', $role->id) }}"

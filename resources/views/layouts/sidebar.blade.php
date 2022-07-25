@@ -67,11 +67,11 @@
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-045-heart"></i>
-                    <span class="nav-text">Profil</span>
+                    <span class="nav-text">Profile</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="#">Ajout Profil</a></li>
-                    <li><a href="#">Liste Profil</a></li>
+                    <li><a href="{{ route('admin.profils.create') }}">Ajout Profile</a></li>
+                    <li><a href="{{ route('admin.profils.index') }}">Liste Profile</a></li>
 
                 </ul>
             </li>
