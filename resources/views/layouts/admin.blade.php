@@ -18,9 +18,8 @@
 
 <body class="font-sans antialiased">
     
-    <@include('layouts.base')
-
-    
+    @include('layouts.base')
+   
 </body>
 
 </html>

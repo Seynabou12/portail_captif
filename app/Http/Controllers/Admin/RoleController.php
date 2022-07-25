@@ -31,7 +31,7 @@ class RoleController extends Controller
     public function edit($id)
     {
         $role = Role::find($id);
-        return view('admin.roles.edit')->with('role', $role,);
+        return view('admin.roles.edit')->with('role', $role);
     }
 
     public function update(Request $request, $id)

@@ -23,13 +23,13 @@ class ProfileController extends Controller
     {
         $input = $request->all();
         Profile::create($input);
-        return redirect('admin/profils')->with('flash-message', 'Le role à été bien enregistré');
+        return redirect('admin/profils')->with('flash-message', 'Le profil à été bien enregistré');
     }
     public function edit($id)
     {
 
         $profile = Profile::find($id);
-        return view('admin.profils.edit')->with('role', $profile,);
+        return view('admin.profils.edit')->with('profile', $profile);
     }
 
     public function update(Request $request, $id)
@@ -43,6 +43,6 @@ class ProfileController extends Controller
     public function destroy(Profile $profile)
     {
         $profile->delete();
-        return back()->with('flash-message', 'Role supprimé avec succés');
+        return back()->with('flash-message', 'Profil supprimé avec succés');
     }
 }

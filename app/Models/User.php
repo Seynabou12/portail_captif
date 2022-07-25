@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Models\Role;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
@@ -23,6 +24,10 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+    // public function getRole()
+    // {
+    //     return $this->hasMany(Role::class); 
+    // }
 
     /**
      * The attributes that should be hidden for serialization.

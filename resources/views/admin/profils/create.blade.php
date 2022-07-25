@@ -28,9 +28,10 @@
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" method="POST" action="/admin/profils/store"
+                                <form class="needs-validation" novalidate="" method="POST" action="{{ route('admin.profils.store') }}"
                                     enctype="multipart/form-data">
                                     @csrf
+                                    @method('PUT')
                                     <div class="row">
                                         <div class="col-xl-12">
                                             <div class="mb-5 row">

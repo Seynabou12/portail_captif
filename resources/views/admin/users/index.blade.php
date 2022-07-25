@@ -28,7 +28,6 @@
                                             <th>Id</th>
                                             <th>Name</th>
                                             <th>Email</th>
-                                            <th>Password</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -39,7 +38,6 @@
                                                 <td>{{ $no++ }}</td>
                                                 <td>{{ $user->name }}</td>
                                                 <td>{{ $user->email }}</td>
-                                                <td>{{ $user->password }}</td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <a href="{{ route('admin.users.edit', $user->id) }}"
@@ -53,7 +51,6 @@
                                                             <button type="submit" class="btn btn-danger shadow btn-xs sharp"><i
                                                             class="fa fa-trash"></i></button>
                                                         </form>
-
                                                     </div>
                                                 </td>
                                             </tr>

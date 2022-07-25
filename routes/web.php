@@ -26,6 +26,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+
 Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->group(function(){
     Route::get('/', [IndexController::class, 'index'])->name('index');
     Route::resource('/roles', RoleController::class);
@@ -35,7 +36,7 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
     Route::resource('/users', UserController::class);
     Route::post('/users/create', [UserController::class, 'store'])->name('admin.users.store');
     Route::resource('/profils', ProfileController::class);
-    Route::post('/profils/create',[ProfileController::class, 'store']);
+    Route::post('/profils/create',[ProfileController::class, 'store'])->name('admin.profils.store');
 });
 
 require __DIR__.'/auth.php';

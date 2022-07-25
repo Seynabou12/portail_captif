@@ -31,6 +31,7 @@
                                 <form class="needs-validation" novalidate="" method="POST" action="/admin/roles/store"
                                     enctype="multipart/form-data">
                                     @csrf
+                                    @method('PUT')
                                     <div class="row">
                                         <div class="col-xl-12">
                                             <div class="mb-5 row">
