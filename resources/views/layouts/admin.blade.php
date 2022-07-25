@@ -17,6 +17,7 @@
 </head>
 
 <body class="font-sans antialiased">
+    
     <@include('layouts.base')
 
     

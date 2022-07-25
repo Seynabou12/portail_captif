@@ -5,12 +5,13 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
+use Whoops\Run;
 
 class RoleController extends Controller
 {
     public function index()
     {
-        $roles = Role::all();
+        $roles = Role::whereNotIn('name', ['admin'])->get();
         return view('admin.roles.index', compact('roles'));
     }
 
@@ -21,12 +22,12 @@ class RoleController extends Controller
 
     public function store(Request $request)
     {
-
         $input = $request->all();
         Role::create($input);
         return redirect('admin/roles')->with('flash-message', 'Le role à été bien enregistré');
     }
 
+   
     public function edit($id)
     {
         $role = Role::find($id);
@@ -39,5 +40,11 @@ class RoleController extends Controller
         $input = $request->all();
         $role->update($input);
         return redirect('admin/roles')->with('flash-message', 'Vos modifications ont été bien enregistré');
+    }
+
+    public function destroy(Role $role)
+    {
+        $role->delete();
+        return back()->with('flash-message', 'Role supprimé avec succés');
     }
 }

@@ -39,4 +39,9 @@ class PermissionController extends Controller
         $permission->update($input);
         return redirect('admin/permissions')->with('flash-message', 'Vos modifications ont été bien enregistré');
     }
+    public function destroy(Permission $permission)
+    {
+        $permission->delete();
+        return back()->with('flash-message', 'Permission supprimé avec succés');
+    }
 }

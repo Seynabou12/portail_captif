@@ -46,8 +46,14 @@
                                                         <a href="{{ route('admin.permissions.edit', $permission->id) }}"
                                                             class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                                 class="fas fa-pencil-alt"></i></a>
-                                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i
-                                                                class="fa fa-trash"></i></a>
+                                                                <form action="{{ route('admin.permissions.destroy', $permission->id) }}"
+                                                                    method="POST"
+                                                                    onsubmit="return confirm('Voulez-vous vraiment supprimer la permission')">
+                                                                    @csrf
+                                                                    @method('delete')
+                                                                    <button type="submit" class="btn btn-danger shadow btn-xs sharp"><i
+                                                                    class="fa fa-trash"></i></button>
+                                                                </form>
                                                     </div>
                                                 </td>
                                             </tr>
