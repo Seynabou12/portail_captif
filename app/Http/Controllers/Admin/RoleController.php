@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Whoops\Run;
 
@@ -30,8 +31,9 @@ class RoleController extends Controller
    
     public function edit($id)
     {
+
         $role = Role::find($id);
-        return view('admin.roles.edit')->with('role', $role);
+        return view('admin.roles.edit')->with('role', $role,);
     }
 
     public function update(Request $request, $id)

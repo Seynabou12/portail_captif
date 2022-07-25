@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\IndexController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,8 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
     Route::post("/roles/create",[RoleController::class, 'store']);
     Route::resource('/permissions', PermissionController::class);
     Route::post("/permissions/create",[PermissionController::class, 'store']);
+    Route::resource('/users', UserController::class);
+    Route::post('/users/create', [UserController::class, 'store'])->name('admin.users.store');
 });
 
 require __DIR__.'/auth.php';

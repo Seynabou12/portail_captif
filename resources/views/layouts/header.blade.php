@@ -1,7 +1,7 @@
 <div class="nav-header">
     <a href="index.html" class="brand-logo">
 
-        <img src="/images/wim-sbg.png" alt="" srcset="" width="70" height="60"   class="">
+        <img src="/images/" alt="" srcset="" width="70" height="60"   class="">
         
      
     </a>

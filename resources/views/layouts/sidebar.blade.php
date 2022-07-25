@@ -3,10 +3,10 @@
         <ul class="metismenu" id="menu">
             <li class="dropdown header-profile">
                 <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                    <img src="/images/profile/pic1.jpg" width="20" alt="">
+                    <img src="/images/avatar/1.png" width="20" alt="">
                     <div class="header-info ms-3">
-                        <span class="font-w600 ">Hi,<b>William</b></span>
-                        <small class="text-end font-w400">william@gmail.com</small>
+                        <span class="font-w600 ">Hello,<b>Seynabou</b></span>
+                        <small class="text-end font-w400">admin@gmail.com</small>
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
@@ -51,8 +51,8 @@
                     <span class="nav-text">Users</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="app-profile.html">Ajout Users</a></li>
-                    <li><a href="app-profile.html">Liste Users</a></li>
+                    <li><a href="{{ route('admin.users.create') }}">Ajout Users</a></li>
+                    <li><a href="{{ route('admin.users.index') }}">Liste Users</a></li>
                 </ul>
             </li>
 
@@ -61,8 +61,8 @@
                     <span class="nav-text">Roles</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{ route('admin.roles.create')}}">Ajout Role</a></li>
-                    <li><a href="{{ route('admin.roles.index')}}">Liste Role</a></li>
+                    <li><a href="{{ route('admin.roles.create') }}">Ajout Role</a></li>
+                    <li><a href="{{ route('admin.roles.index') }}">Liste Role</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -84,6 +84,7 @@
                     <li><a href="{{ route('admin.permissions.index')}}">Liste Permissions</a></li>
                 </ul>
             </li>
+            
 
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-022-copy"></i>
